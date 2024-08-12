@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CALL</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            padding-top: 25px;
+        }
+
+        .form-input {
+            text-align: center;
+            width: 20%;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        .button {
+            text-align: center;
+            width: auto;
+            margin: 8px;
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 8px;
+            color: white;
+            background-color: blue;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 5px darksalmon dashed;
+        }
+    </style>
+</head>
+
+<body>
+
+    simple application to calculate date of birth difference
+    <div class="container">
+        <label for="bod">daye of birth</label>
+        <input class="form-input" type="date" name="dob" id="dob">
+    </div>
+    <button class="button" onclick="calculate()">calculate date</button>
+    <hr>
+    <div id></div>
+    <script>
+        function calculate() {
+            let input = document.getElementById(dob).value
+            if (Date.parse(input)) {
+                let inputDate = new Date(input);
+                let curentdate = new Date();
+                document.getElementById("display.date").innerHTML = `input value:$(input)(br) Formatted Date : $(inputdate)<br> currentdate:$(currentdate)`
+            }
+        }
+    </script>
+</body>
+
+</html>
